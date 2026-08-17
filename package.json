@@ -1,0 +1,29 @@
+{
+  "name": "dsh-at-file",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Workspace-scoped @ file references and multi-file picker for DeepSeek Harness Web",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-input-trigger",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "node --test --experimental-test-isolation=none"
+  },
+  "license": "UNLICENSED"
+}
